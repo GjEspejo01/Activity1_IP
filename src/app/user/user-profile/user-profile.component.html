@@ -1,0 +1,31 @@
+<mat-sidenav-container class="app-sidenav-container">
+    <mat-sidenav mode="side" opened class="app-sidenav">
+      <mat-toolbar color="black">
+        Menu
+      </mat-toolbar>
+      <mat-list>
+
+  
+        <p class="designation">College of Engineering</p>
+        <P class="designation">I.T</P>
+        <mat-divider></mat-divider>
+  
+        <mat-list-item class="menu-button">
+          <a routerLink=""><mat-icon>home</mat-icon>Home</a></mat-list-item>
+      <mat-list-item><a routerLink="user-list" routerLinkActive="active"(click)="navClick('user-list')">USER PROFILE</a></mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+    </mat-sidenav>
+  
+    <div class="app-sidenav-content">
+      <mat-toolbar color="primary">
+        <button mat-button class="sidenav-toggle">
+          <mat-icon>menu</mat-icon>
+        </button>
+        {{currentNav}}
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+  
+  
